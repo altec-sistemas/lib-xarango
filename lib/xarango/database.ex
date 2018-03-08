@@ -45,7 +45,7 @@ defmodule Xarango.Database do
   end
 
   def default do
-    %Database{name: Application.get_env(:xarango, :db)[:database]}
+    %Database{name: System.get_env("ARANGO_DATABASE")}
   end
 
   def system do
